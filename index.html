@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sally Go Week 7</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant" rel="stylesheet">
+</head>
+<body>
+  <h1 id="header1" >Encouragement Quote for Job Interview</h1>
+<section id="s1">
+<h2 id="first">"One important key to success is self-confidence. An important key to self-confidence is preparation."</h2>
+<h2 id="second">~ Arthur Ashe</h2>
+<button id="button1">Keep it Up!</button>
+</section>
+
+<script>
+  const q1 = ["If you're going through hell, keep going." ,"Opportunities don't happen, you create them." , "The best way out is always through.",
+              "Don't be afraid to fail. Don't waste energy trying to cover up failure. Learn from your failures and go on to the next challenge.",
+            "In the middle of difficulty lies opportunity." , "You miss 100% of the shots you don't take." , "It does not matter how slowly you go as long as you do not stop.",
+          "It's not whether you get knocked down. It's whether you get up."];
+  const q2 = ["~ Winston Churchill", "~ Chris Grosser", "~ Robert Frost", "~ H. Stanley Judd", "~ Albert Einstein", "~ Wayne Gretzky", "~ Confucius", "~ Vince Lombardi"];
+  let count = 0;
+
+  document.getElementById("button1").addEventListener("click", buttonClicked);
+
+  function buttonClicked(){
+    console.log(q1[count]);
+    console.log(q2[count]);
+    document.getElementById("first").innerHTML = q1[count];
+    document.getElementById("second").innerHTML = q2[count];
+    if(count>=7){
+      count = 0;
+    }else{
+    count++;
+  }
+  }
+
+</script>
+
+</body>
+
+</html>
